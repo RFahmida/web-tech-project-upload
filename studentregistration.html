@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="studentregistrationstyle.css">
+        <link rel="stylesheet" href="../CSS/studentregistrationstyle.css">
     </head>
     <body>
         <div class="backimg">
-        <img src="file:///e:/12th Semester (Fall)/Web Technologies/WebProject/Picture/Student/Registration/studentregistration.jpg" alt="Registration Form" width="600" height="690">
+        <img src="file:///e:/12th Semester (Fall)/Web Technologies/WebProject/student/WebPicture/Student/studentregistration.jpg" alt="Registration Form" width="600" height="780">
         <div class="registrationicon">
-            <img src="file:///e:/12th Semester (Fall)\Web Technologies/WebProject/Picture/Student/Registration/student-registration-icon3.jpg" alt="Registration Icon" width="200" height="170">
+            <img src="file:///e:/12th Semester (Fall)/Web Technologies/WebProject/student/WebPicture/Student/student-registration-icon3.jpg" alt="Registration Icon" width="200" height="170">
         </div>
   <div>
-  <form>
+  <form method="post" action="studentregistrationsubmit.html" onsubmit="return registrationvalidateForm()">
  
   <label for="name" class="fullname"><b>Full Name:</b></label>
-  <input type="text" id="name" name="name" class="fullnamearea"><br><br>
+  <input type="text" id="name" name="name" class="fullnamearea" onkeyup="nameCheck()"><p id="errorname"></p><br><br>
   <label for="phonenumber" class="phonenum"><b>Phone Number:</b></label>
-  <input type="tel" id="phonenumber" name="phonenumber" class="phonenumarea"><br><br>
+  <input type="tel" id="phonenumber" name="phonenumber" class="phonenumarea" onkeyup="phoneCheck()"><p id="errornum"></p><br><br>
   <label for="email" class="emailadd"><b>Email Address:</b></label>
-  <input type="email" id="email" name="email" class="emailaddarea"><br><br>
+  <input type="email" id="email" name="email" class="emailaddarea" onkeyup="emailCheck()"><p id="errormail"></p><br><br>
   <label for="address" class="homeadd"><b>Home Address:</b></label>
   <input type="text" id="address" name="homeadd" class="homeaddarea"><br><br>
   <label for="bloodtype" class="bloodtypeofstudent"><b>Blood Type:</b></label>
@@ -50,13 +50,15 @@
    <option value="chessclub">Chess Club</option>
   </select><br><br>
   <label for="passward" class="choosenpassward"><b>Passward:</b></label>
-  <input type="text" id="passward" name="passward" class="choosenpasswardarea"><br><br>
+  <input type="text" id="passward" name="passward" class="choosenpasswardarea" onkeyup="passCheck()"><p id="errorpass"></p><br><br>
   <label for="confirmedpassward" class="confirmedpasswardname"><b>Confirmed Passward:</b></label>
-  <input type="text" id="confirmedpassward" name="confirmedpassward" class="confirmedpasswardnamearea"><br><br>
-  <input type="submit" value="Submit" class="submitarea">
+  <input type="text" id="confirmedpassward" name="confirmedpassward" class="confirmedpasswardnamearea" onkeyup="conpassCheck()"><p id="errorconpass"></p><br><br>
+  <input type="submit" value="Submit" class="submitarea"><br><br>
+  <input type="reset" value="Clear" class="cleararea">
 
 </form>
 </div>
 </div>
+<script src="../js/studentregistration.js"></script>
 </body>
 </html>
